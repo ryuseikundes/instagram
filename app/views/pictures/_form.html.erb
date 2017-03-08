@@ -1,0 +1,45 @@
+<%= form_for(@picture) do |f| %>
+  <% if @picture.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= @picture.errors.count %>件のエラーがあります。</h2>
+
+      <ul>
+      <% @picture.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.label :タイトル %>
+  <%= f.text_field :title %>
+  <br>
+  <%= f.label :内容 %>
+  <%= f.text_field :content %>
+  <br>
+  <div class="field">
+    <% if @picture.image? %>
+      <div class="thumbnail">
+      <%= image_tag @picture.image.url %>
+    </div>
+  <% end %><br>
+    <%= f.label :画像 %><br>
+    <%= f.file_field :image %>
+    <%= f.hidden_field :image_cache %>
+  </div>
+  <div class="field">
+    <!-- 既存レコード(DBに保存されている)かつ、画像が存在する場合 -->
+    <% if @picture.persisted? && @picture.image? %>
+      <label>
+      <%= f.check_box :remove_image %>
+      画像を削除
+    </label>
+  <% end %>
+  </div>
+  <%= f.submit %>
+
+
+<% end %>
+
+
+<%= link_to "一覧TOP", root_path %>

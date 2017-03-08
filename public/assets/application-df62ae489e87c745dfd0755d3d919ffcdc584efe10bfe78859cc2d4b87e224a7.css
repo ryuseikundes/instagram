@@ -1,0 +1,83 @@
+/* line 1, /Users/ryuseimatsumoto/workspace/instagram/app/assets/stylesheets/top.scss */
+header {
+  background-color: orange;
+  height: 50px;
+}
+
+/* line 7, /Users/ryuseimatsumoto/workspace/instagram/app/assets/stylesheets/top.scss */
+header ul {
+  margin: 0 auto;
+  list-style: none;
+}
+
+/* line 12, /Users/ryuseimatsumoto/workspace/instagram/app/assets/stylesheets/top.scss */
+header ul a {
+  text-decoration: none;
+}
+
+/* line 16, /Users/ryuseimatsumoto/workspace/instagram/app/assets/stylesheets/top.scss */
+header li {
+  float: left;
+  width: auto;
+}
+
+/* line 21, /Users/ryuseimatsumoto/workspace/instagram/app/assets/stylesheets/top.scss */
+header ul:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* line 27, /Users/ryuseimatsumoto/workspace/instagram/app/assets/stylesheets/top.scss */
+header ul a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: white;
+}
+
+/* line 34, /Users/ryuseimatsumoto/workspace/instagram/app/assets/stylesheets/top.scss */
+.parent {
+  width: 100px;
+  margin: 10px 20px;
+  padding: 10px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+/* line 44, /Users/ryuseimatsumoto/workspace/instagram/app/assets/stylesheets/top.scss */
+.inner {
+  padding: 5px;
+  margin: 0 10px;
+  width: 200px;
+  display: inline-block;
+}
+
+/* line 51, /Users/ryuseimatsumoto/workspace/instagram/app/assets/stylesheets/top.scss */
+.left {
+  float: left;
+  margin-right: 10px;
+}
+
+/* line 53, /Users/ryuseimatsumoto/workspace/instagram/app/assets/stylesheets/top.scss */
+body {
+  background-color: silver;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+

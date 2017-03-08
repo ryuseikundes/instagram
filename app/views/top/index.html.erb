@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Instagram</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <ul>
+       <li><a href="#">Instagram</a></li>
+       <li><a href="pictures/new">投稿</a></li>
+       <% if user_signed_in? %>
+    <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+  <% else %>
+    <li><%= link_to 'ログイン', new_user_session_path  %></li>
+    <li><%= link_to 'サインアップ', new_user_registration_path %></li>
+  <% end %>
+  </ul>
+
+
+</header>
+
+<p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
+
+<div class="parent">
+<img src="<%= asset_path "instagram.png"%>"class="left">
+<div class="index">
+
+<h1>picture一覧</h1>
+<% @pictures.each do |picture| %>
+  <p>タイトル:<%= picture.title %></p>
+  <p>本文:<%= picture.content %></p>
+  <p><strong>Image:</strong>
+   <% picture.image %>
+  <%= image_tag picture.image.url %>
+  </p>
+  <%= link_to "編集する", edit_picture_path(picture.id) %>
+  <%= link_to '削除する', picture_path(picture.id), method: :delete, data: { confirm: '本当に消去していいですか？' } %>
+<%= picture.user.name %>
+<% end %>
+
+</div>
+</div>
+
+</body>
