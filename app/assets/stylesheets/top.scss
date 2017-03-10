@@ -1,5 +1,5 @@
 header{
-  background-color: orange;
+  background-color: white;
   height: 50px;
 }
 
@@ -11,11 +11,15 @@ header ul {
 
 header ul a {
   text-decoration: none;
+
 }
 
 header li {
   float: left;
   width: auto;
+  list-style:none;
+  margin :15px;
+
 }
 
 header ul:after {
@@ -51,8 +55,20 @@ header ul a {
 .left {float: left;margin-right:10px;}
 
 body{
-background-color:silver;
+background-color:#EEEEEE
 }
+
+.post{
+   margin: 30px 10px;
+
+}
+
+.picture{
+  margin: 0px 50px 0px 250px;
+  }
+
+
+
 // Place all the styles related to the top controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
